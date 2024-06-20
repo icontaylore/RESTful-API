@@ -1,0 +1,19 @@
+version: '4.31.1'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: todo
+      POSTGRES_USER: todo_user
+      POSTGRES_PASSWORD: 1
+    ports:
+      - '5432:5432'
+  app:
+    build: .
+    ports:
+      - '8660:8660'
+    depends_on:
+      - db
+    environment:
+      - PORT=8660
+      - DATABASE_URL=postgresql://todo_user:1@db:5432/todo
