@@ -3,7 +3,7 @@
 
 ## Установка и запуск
 1. Убедитесь, что у вас установлен Node.js
-\n *npm install*
+*npm install*
 
 2. Запуск приложения и базы данных с использованием Docker:
 Для запуска приложения вместе с PostgreSQL выполните:
@@ -115,6 +115,8 @@ Authorization: Bearer jwt
 DELETE /tasks/1
 Authorization: Bearer jwt
 
+
+(надеюсь не слишком корявая документация)
 
 
 
